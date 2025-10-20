@@ -1,11 +1,10 @@
 {
-  "preset": "react-native",
+  "preset": "jest-expo",
   "setupFilesAfterEnv": ["<rootDir>/__tests__/setup.js"],
   "transformIgnorePatterns": [
-    "node_modules/(?!(react-native|@react-native|@react-navigation|react-redux|@reduxjs/toolkit|expo|@expo)/)"
+    "node_modules/(?!(react-native|@react-native|@react-navigation|react-redux|@reduxjs/toolkit|expo|@expo|expo-modules-core|@testing-library)/)"
   ],
   "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
-  "testEnvironment": "jsdom",
   "collectCoverageFrom": [
     "src/**/*.{js,jsx,ts,tsx}",
     "!src/**/*.d.ts",
@@ -21,7 +20,7 @@
       "statements": 60
     }
   },
-  "moduleNameMapping": {
+  "moduleNameMapper": {
     "^@/(.*)$": "<rootDir>/src/$1"
   }
 }
