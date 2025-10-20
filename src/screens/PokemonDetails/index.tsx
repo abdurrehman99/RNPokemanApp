@@ -11,6 +11,7 @@ import {
     View,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { Colors, getPokemonTypeColor, getStatBarColor } from '../../constants/colors';
 import { useGetPokemonByIdQuery } from '../../services/pokemonApi';
 import { RootStackParamList } from '../../types/pokemon';
 import { styles } from './styles';
@@ -76,7 +77,7 @@ const PokemonDetails: React.FC = () => {
     return (
       <SafeAreaView style={styles.container} edges={['bottom']}>
         <View style={styles.centerContainer}>
-          <ActivityIndicator size="large" color="#3B82F6" />
+          <ActivityIndicator size="large" color={Colors.primary} />
           <Text style={styles.loadingText}>Loading Pokemon details...</Text>
         </View>
       </SafeAreaView>
@@ -123,7 +124,7 @@ const PokemonDetails: React.FC = () => {
                   key={typeInfo.type.name}
                   style={[
                     styles.typeChip,
-                    { backgroundColor: getTypeColor(typeInfo.type.name) },
+                    { backgroundColor: getPokemonTypeColor(typeInfo.type.name) },
                   ]}
                 >
                   <Text style={styles.typeText}>
@@ -183,8 +184,7 @@ const PokemonDetails: React.FC = () => {
                         styles.statBar,
                         {
                           width: `${Math.min((statInfo.base_stat / 200) * 100, 100)}%`,
-                          backgroundColor: statInfo.base_stat > 100 ? '#10B981' : 
-                                          statInfo.base_stat > 50 ? '#F59E0B' : '#EF4444',
+                          backgroundColor: getStatBarColor(statInfo.base_stat),
                         },
                       ]}
                     />

@@ -5,6 +5,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import Loading from './src/components/Loading';
+import { Colors } from './src/constants/colors';
 import PokemonDetails from './src/screens/PokemonDetails';
 import PokemonList from './src/screens/PokemonList';
 import { persistor, store } from './src/store/store';
@@ -22,9 +23,9 @@ export default function App() {
             initialRouteName="PokemonList"
             screenOptions={{
               headerStyle: {
-                backgroundColor: '#FFFFFF',
+                backgroundColor: Colors.surface,
               },
-              headerTintColor: '#1E293B',
+              headerTintColor: Colors.textPrimary,
               headerTitleStyle: {
                 fontWeight: '600',
               },
