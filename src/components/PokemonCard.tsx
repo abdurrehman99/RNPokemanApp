@@ -16,7 +16,8 @@ interface PokemonCardProps {
 const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, onPress }) => {
   const getPokemonId = (url: string): number => {
     const parts = url.split('/').filter(Boolean);
-    return parseInt(parts[parts.length - 1], 10);
+    const id = parseInt(parts[parts.length - 1] || '0', 10);
+    return isNaN(id) ? 0 : id;
   };
 
   const getPokemonImageUrl = (id: number): string => {
