@@ -6,7 +6,6 @@ import {
     Alert,
     Image,
     ScrollView,
-    StatusBar,
     Text,
     TouchableOpacity,
     View,
@@ -97,7 +96,7 @@ const PokemonDetails: React.FC = () => {
 
   if (isLoading) {
     return (
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView style={styles.container} edges={['bottom']}>
         <View style={styles.centerContainer}>
           <ActivityIndicator size="large" color="#3B82F6" />
           <Text style={styles.loadingText}>Loading Pokemon details...</Text>
@@ -108,7 +107,7 @@ const PokemonDetails: React.FC = () => {
 
   if (error || !pokemon) {
     return (
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView style={styles.container} edges={['bottom']}>
         <View style={styles.centerContainer}>
           <Text style={styles.errorText}>Failed to load Pokemon details</Text>
           <TouchableOpacity style={styles.retryButton} onPress={() => refetch()}>
@@ -120,8 +119,7 @@ const PokemonDetails: React.FC = () => {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#F8FAFC" />
+    <SafeAreaView style={styles.container} edges={['bottom']}>
       <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
         <View style={styles.content}>
           {/* Pokemon Image and Basic Info */}

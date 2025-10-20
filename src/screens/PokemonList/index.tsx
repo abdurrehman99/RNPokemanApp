@@ -5,7 +5,6 @@ import {
     ActivityIndicator,
     Alert,
     FlatList,
-    StatusBar,
     Text,
     TouchableOpacity,
     View,
@@ -124,8 +123,7 @@ const PokemonList: React.FC = () => {
   // Loading state for initial load
   if (isLoading && currentOffset === 0) {
     return (
-      <SafeAreaView style={styles.container}>
-        <StatusBar barStyle="dark-content" backgroundColor="#F8FAFC" />
+      <SafeAreaView style={styles.container} edges={['bottom']}>
         <View style={styles.centerContainer}>
           <ActivityIndicator size="large" color="#3B82F6" />
           <Text style={styles.loadingText}>Loading Pokemon...</Text>
@@ -137,8 +135,7 @@ const PokemonList: React.FC = () => {
   // Error state for initial load
   if (error && currentOffset === 0) {
     return (
-      <SafeAreaView style={styles.container}>
-        <StatusBar barStyle="dark-content" backgroundColor="#F8FAFC" />
+      <SafeAreaView style={styles.container} edges={['bottom']}>
         <View style={styles.centerContainer}>
           <Text style={styles.errorText}>Failed to load Pokemon</Text>
           <TouchableOpacity style={styles.retryButton} onPress={handleRetry}>
@@ -150,8 +147,7 @@ const PokemonList: React.FC = () => {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#F8FAFC" />
+    <SafeAreaView style={styles.container} edges={['bottom']}>
       <View style={styles.content}>
         <FlatList
           data={allPokemon}
