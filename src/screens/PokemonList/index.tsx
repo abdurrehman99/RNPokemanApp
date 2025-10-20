@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import PokemonCard from '../../components/PokemonCard';
+import { Colors } from '../../constants/colors';
 import { useGetPokemonListQuery } from '../../services/pokemonApi';
 import { PokemonListItem, RootStackParamList } from '../../types/pokemon';
 import { styles } from './styles';
@@ -103,7 +104,7 @@ const PokemonList: React.FC = () => {
     if (isFetching || isLoadingMore) {
       return (
         <View style={styles.footerLoader}>
-          <ActivityIndicator size="small" color="#3B82F6" />
+          <ActivityIndicator size="small" color={Colors.primary} />
           <Text style={styles.loadingMoreText}>Loading more Pokemon...</Text>
         </View>
       );
@@ -125,7 +126,7 @@ const PokemonList: React.FC = () => {
     return (
       <SafeAreaView style={styles.container} edges={['bottom']}>
         <View style={styles.centerContainer}>
-          <ActivityIndicator size="large" color="#3B82F6" />
+          <ActivityIndicator size="large" color={Colors.primary} />
           <Text style={styles.loadingText}>Loading Pokemon...</Text>
         </View>
       </SafeAreaView>

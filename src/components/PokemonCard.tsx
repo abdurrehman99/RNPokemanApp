@@ -6,6 +6,7 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { Colors } from '../constants/colors';
 import { PokemonListItem } from '../types/pokemon';
 
 interface PokemonCardProps {
@@ -52,12 +53,12 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, onPress }) => {
 
 const styles = StyleSheet.create({
   pokemonItem: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: Colors.surface,
     marginHorizontal: 16,
     marginVertical: 8,
     borderRadius: 12,
     elevation: 2,
-    shadowColor: '#000',
+    shadowColor: Colors.shadow,
     shadowOffset: {
       width: 0,
       height: 1,
@@ -74,7 +75,7 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     borderRadius: 30,
-    backgroundColor: '#F1F5F9',
+    backgroundColor: Colors.surfaceSecondary,
   },
   pokemonInfo: {
     marginLeft: 16,
@@ -83,12 +84,12 @@ const styles = StyleSheet.create({
   pokemonName: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#1E293B',
+    color: Colors.textPrimary,
     marginBottom: 4,
   },
   pokemonId: {
     fontSize: 14,
-    color: '#64748B',
+    color: Colors.textSecondary,
     fontWeight: '500',
   },
 });

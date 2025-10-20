@@ -1,9 +1,10 @@
 import { StyleSheet } from 'react-native';
+import { Colors } from '../../constants/colors';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F8FAFC',
+    backgroundColor: Colors.background,
   },
   scrollView: {
     flex: 1,
@@ -19,35 +20,35 @@ export const styles = StyleSheet.create({
   imageSection: {
     alignItems: 'center',
     paddingVertical: 32,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: Colors.surface,
     marginBottom: 16,
   },
   pokemonImage: {
     width: 150,
     height: 150,
     borderRadius: 75,
-    backgroundColor: '#F1F5F9',
+    backgroundColor: Colors.surfaceSecondary,
     marginBottom: 16,
   },
   pokemonName: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#1E293B',
+    color: Colors.textPrimary,
     marginBottom: 4,
   },
   pokemonId: {
     fontSize: 16,
-    color: '#64748B',
+    color: Colors.textSecondary,
     fontWeight: '500',
   },
   section: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: Colors.surface,
     marginHorizontal: 16,
     marginBottom: 16,
     borderRadius: 12,
     padding: 20,
     elevation: 2,
-    shadowColor: '#000',
+    shadowColor: Colors.shadow,
     shadowOffset: {
       width: 0,
       height: 1,
@@ -58,7 +59,7 @@ export const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#1E293B',
+    color: Colors.textPrimary,
     marginBottom: 16,
   },
   typesContainer: {
@@ -72,7 +73,7 @@ export const styles = StyleSheet.create({
     borderRadius: 16,
   },
   typeText: {
-    color: '#FFFFFF',
+    color: Colors.textInverse,
     fontSize: 14,
     fontWeight: '600',
   },
@@ -86,12 +87,12 @@ export const styles = StyleSheet.create({
   },
   basicInfoLabel: {
     fontSize: 16,
-    color: '#64748B',
+    color: Colors.textSecondary,
   },
   basicInfoValue: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#1E293B',
+    color: Colors.textPrimary,
   },
   abilitiesContainer: {
     flexDirection: 'row',
@@ -99,13 +100,13 @@ export const styles = StyleSheet.create({
     gap: 8,
   },
   abilityChip: {
-    backgroundColor: '#E2E8F0',
+    backgroundColor: Colors.border,
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 16,
   },
   abilityText: {
-    color: '#475569',
+    color: Colors.textTertiary,
     fontSize: 14,
     fontWeight: '500',
   },
@@ -118,12 +119,12 @@ export const styles = StyleSheet.create({
   statName: {
     fontSize: 14,
     fontWeight: '500',
-    color: '#64748B',
+    color: Colors.textSecondary,
     textTransform: 'capitalize',
   },
   statBarContainer: {
     height: 8,
-    backgroundColor: '#E2E8F0',
+    backgroundColor: Colors.border,
     borderRadius: 4,
     overflow: 'hidden',
   },
@@ -134,28 +135,28 @@ export const styles = StyleSheet.create({
   statValue: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#1E293B',
+    color: Colors.textPrimary,
     alignSelf: 'flex-end',
   },
   loadingText: {
     marginTop: 12,
     fontSize: 16,
-    color: '#64748B',
+    color: Colors.textSecondary,
   },
   errorText: {
     fontSize: 16,
-    color: '#EF4444',
+    color: Colors.error,
     textAlign: 'center',
     marginBottom: 16,
   },
   retryButton: {
-    backgroundColor: '#3B82F6',
+    backgroundColor: Colors.primary,
     paddingHorizontal: 24,
     paddingVertical: 12,
     borderRadius: 8,
   },
   retryButtonText: {
-    color: '#FFFFFF',
+    color: Colors.textInverse,
     fontSize: 16,
     fontWeight: '600',
   },

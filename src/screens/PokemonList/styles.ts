@@ -1,9 +1,10 @@
 import { StyleSheet } from 'react-native';
+import { Colors } from '../../constants/colors';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F8FAFC',
+    backgroundColor: Colors.background,
   },
   content: {
     flex: 1,
@@ -12,27 +13,27 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F8FAFC',
+    backgroundColor: Colors.background,
   },
   loadingText: {
     marginTop: 12,
     fontSize: 16,
-    color: '#64748B',
+    color: Colors.textSecondary,
   },
   errorText: {
     fontSize: 16,
-    color: '#EF4444',
+    color: Colors.error,
     textAlign: 'center',
     marginBottom: 16,
   },
   retryButton: {
-    backgroundColor: '#3B82F6',
+    backgroundColor: Colors.primary,
     paddingHorizontal: 24,
     paddingVertical: 12,
     borderRadius: 8,
   },
   retryButtonText: {
-    color: '#FFFFFF',
+    color: Colors.textInverse,
     fontSize: 16,
     fontWeight: '600',
   },
@@ -43,11 +44,11 @@ export const styles = StyleSheet.create({
   loadingMoreText: {
     marginTop: 8,
     fontSize: 14,
-    color: '#64748B',
+    color: Colors.textSecondary,
   },
   endOfListText: {
     fontSize: 16,
-    color: '#10B981',
+    color: Colors.success,
     fontWeight: '600',
     textAlign: 'center',
   },
